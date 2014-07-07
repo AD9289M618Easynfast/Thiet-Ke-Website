@@ -1,0 +1,181 @@
+// reset css
+@import "reset";
+$basecolor: #1a2a06;
+@mixin subtext($color: #fff){
+	font: {
+		family: "tahoma", san-serif;
+		size: 11px;
+	}
+	color: $color;
+	text-decoration: none;
+}
+@mixin maintext($size: 17px, $weight: bold){
+	font: {
+		family: "Constantia", serif;
+		size: $size;
+		weight: $weight;
+	}
+	color: #fff;
+	text-decoration: none;
+}
+body{
+	background: url("../images/bg.png") no-repeat center top;
+	background-color: $basecolor;
+	#head-wrap{
+		width: 100%;
+		height: 39px;
+		line-height: 39px;
+		background-color: rgba(32, 56, 6, 0.7);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		.head{
+			width: 1000px;
+			margin: 0 auto;
+			overflow: hidden;
+			ul{
+				width: 865px;
+				float: left;
+				li{
+					display: inline-block;
+					a{
+						@include subtext;
+						padding: 0 10px;
+						border-right: 1px solid #edefeb;
+						span{
+							font-weight: bold;
+						}
+					}
+					&:last-child a{
+						border-right: none;
+					}
+				}
+			}
+			.social{
+				float: right;
+				@include subtext;
+				background: url("../images/icon-facebook.png") no-repeat center left;
+				padding-left: 22px;
+			}
+		}
+	}
+	#wrapper{
+		width: 1000px;
+		margin: 0 auto;
+		overflow: hidden;
+		#header{
+			.main_nav{
+				margin: 30px 0 15px;
+				overflow: hidden;
+				.logo{
+					float: left;
+				}
+				ul{
+					float: right;
+					margin-top: 40px;
+					li {
+						float:left;
+						padding: 5px 20px;
+						a{
+							@include maintext;
+							display: block;
+						}
+						&:hover{
+							background-color: #e5ecda;
+							a{
+								color: #314f0e;
+							}
+						}
+					}
+				}
+			}
+			.banner{
+				width: 1000px;
+				height: 360px;
+				background: #fff;
+			}
+		}
+		#content{
+			text-align: center;
+			margin: 60px 0;
+			overflow: hidden;
+			.main_content{
+				@include maintext(22px, none);
+				padding-bottom: 35px;
+				background: url(../images/main-content-line.png) no-repeat bottom center;
+			}
+			.cont_wrap{
+				.question{
+					@include maintext(17px, none);
+					width: 100%;
+					padding: 35px 0;
+				}
+			}
+			.cont_product{
+				width: 420px;
+				float: left;
+				margin: 0 40px;
+				p{
+					@include maintext(17px, none);
+				}
+				a{
+					width: 220px;
+					height: 45px;
+					line-height: 45px;
+					background: #3a5215;
+					display: block;
+					margin: 20px auto;
+					border-radius: 5px;
+					-moz-border-radius: 5px;
+					-webkit-border-radius: 5px;
+					text-align: left;
+					padding-left: 20px;
+					color: #111e01;
+					text-decoration: none;
+					font:{
+						size: 17px;
+						weight: bold;
+					}
+					position: relative;
+					span{
+						background: url(../images/btn-arrow.png) no-repeat;
+						position: absolute;
+						top: 18px;
+						right: 15px;
+						width: 13px;
+						height: 11px;
+					}
+					&:hover{
+						background: #2e420e;
+					}
+				}
+			}
+		}
+		#footer{
+			border-top: 1px dotted #3f4f2c;
+			margin-bottom: 30px;
+			overflow: hidden;
+			p{
+				@include subtext(#6a745f);
+				margin-top: 15px;
+				float: left;
+				span{
+					display: block;
+				}
+			}
+			ul{
+				@extend p;
+				float: right;
+				li{
+					float: left;
+					padding-left: 20px;
+					a{
+						color: #6a745f;
+						text-decoration: none;
+						&:hover{
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+}

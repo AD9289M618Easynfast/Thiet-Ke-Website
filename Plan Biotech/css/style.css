@@ -1,0 +1,225 @@
+/****reset css****/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, body #wrapper #footer ul, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  font-weight: normal;
+}
+
+a {
+  cursor: pointer;
+}
+
+ol, ul, li {
+  list-style: none outside none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+.clear {
+  clear: both;
+}
+
+/****end reset****/
+body {
+  background: url("../images/bg.png") no-repeat center top;
+  background-color: #1a2a06;
+}
+body #head-wrap {
+  width: 100%;
+  height: 39px;
+  line-height: 39px;
+  background-color: rgba(32, 56, 6, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+body #head-wrap .head {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+body #head-wrap .head ul {
+  width: 865px;
+  float: left;
+}
+body #head-wrap .head ul li {
+  display: inline-block;
+}
+body #head-wrap .head ul li a {
+  font-family: "tahoma", san-serif;
+  font-size: 11px;
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+  border-right: 1px solid #edefeb;
+}
+body #head-wrap .head ul li a span {
+  font-weight: bold;
+}
+body #head-wrap .head ul li:last-child a {
+  border-right: none;
+}
+body #head-wrap .head .social {
+  float: right;
+  font-family: "tahoma", san-serif;
+  font-size: 11px;
+  color: white;
+  text-decoration: none;
+  background: url("../images/icon-facebook.png") no-repeat center left;
+  padding-left: 22px;
+}
+body #wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+body #wrapper #header .main_nav {
+  margin: 30px 0 15px;
+  overflow: hidden;
+}
+body #wrapper #header .main_nav .logo {
+  float: left;
+}
+body #wrapper #header .main_nav ul {
+  float: right;
+  margin-top: 40px;
+}
+body #wrapper #header .main_nav ul li {
+  float: left;
+  padding: 5px 20px;
+}
+body #wrapper #header .main_nav ul li a {
+  font-family: "Constantia", serif;
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+body #wrapper #header .main_nav ul li:hover {
+  background-color: #e5ecda;
+}
+body #wrapper #header .main_nav ul li:hover a {
+  color: #314f0e;
+}
+body #wrapper #header .banner {
+  width: 1000px;
+  height: 360px;
+  background: #fff;
+}
+body #wrapper #content {
+  text-align: center;
+  margin: 60px 0;
+  overflow: hidden;
+}
+body #wrapper #content .main_content {
+  font-family: "Constantia", serif;
+  font-size: 22px;
+  font-weight: none;
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 35px;
+  background: url(../images/main-content-line.png) no-repeat bottom center;
+}
+body #wrapper #content .cont_wrap .question {
+  font-family: "Constantia", serif;
+  font-size: 17px;
+  font-weight: none;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  padding: 35px 0;
+}
+body #wrapper #content .cont_product {
+  width: 420px;
+  float: left;
+  margin: 0 40px;
+}
+body #wrapper #content .cont_product p, body #wrapper #content .cont_product #footer ul, body #wrapper #footer #content .cont_product ul {
+  font-family: "Constantia", serif;
+  font-size: 17px;
+  font-weight: none;
+  color: #fff;
+  text-decoration: none;
+}
+body #wrapper #content .cont_product a {
+  width: 220px;
+  height: 45px;
+  line-height: 45px;
+  background: #3a5215;
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  text-align: left;
+  padding-left: 20px;
+  color: #111e01;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+  position: relative;
+}
+body #wrapper #content .cont_product a span {
+  background: url(../images/btn-arrow.png) no-repeat;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  width: 13px;
+  height: 11px;
+}
+body #wrapper #content .cont_product a:hover {
+  background: #2e420e;
+}
+body #wrapper #footer {
+  border-top: 1px dotted #3f4f2c;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+body #wrapper #footer p, body #wrapper #footer ul {
+  font-family: "tahoma", san-serif;
+  font-size: 11px;
+  color: #6a745f;
+  text-decoration: none;
+  margin-top: 15px;
+  float: left;
+}
+body #wrapper #footer p span, body #wrapper #footer ul span {
+  display: block;
+}
+body #wrapper #footer ul {
+  float: right;
+}
+body #wrapper #footer ul li {
+  float: left;
+  padding-left: 20px;
+}
+body #wrapper #footer ul li a {
+  color: #6a745f;
+  text-decoration: none;
+}
+body #wrapper #footer ul li a:hover {
+  text-decoration: underline;
+}
