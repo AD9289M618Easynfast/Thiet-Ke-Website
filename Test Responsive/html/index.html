@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+	<head>
+		<title>Test Responsive</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Test online website responsive, simple, easy and fast. Check your site on mobile phone, tablet, and different web browser window sizes.">
+		<meta name="robots" content="noindex,nofollow">
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css"/>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<div class="main-head">
+					<h1 class="logo-test-responsive">
+						<a href="#">
+							<img alt="Test Responsive" src="images/logo-responsive.png" width="644" height="62"/>
+						</a>
+					</h1>
+					<a class="logo-easynfast" href="http://easynfast.net/" target="_blank">
+						<img alt="easynfast.net" src="images/logo-easy.jpg" width="373" height="347"/>
+					</a>
+					<div class="social">
+						<a class="returndialog" title="Return Dialog" ></a>
+						<a class="facebook" href="https://www.facebook.com/easynfast.net" title="Facebook" target="_blank"></a>
+						<a class="google-plus" href="#" title="Google Plus" target="_blank"></a>
+						<a class="twiter" href="#" title="Twiter" target="_blank"></a>
+						<a class="donate" title="Donate"></a>
+					</div>
+				</div>
+				<form class="search-box">
+					<input type="text" placeholder="Test your own site...type the url...." >
+					<input type="submit">
+				</form>
+			</div>
+			<div id="content">
+				<div class="device-wrap">
+					<ul class="device-thumb">
+						<li id="screen-1600" title="display-1600"></li>
+						<li id="screen-1366" title="display-1366"></li>
+						<li id="screen-1024" class="active" title="display-1024"></li>
+						<li id="screen-768" title="display-768"></li>
+						<li id="screen-480" title="display-480"></li>
+						<li id="screen-320" title="display-320"></li>
+					</ul>
+				</div>
+				<div class="screen-display">
+					<ul class="screen-slide">
+						<li class="display-1600"></li>
+						<li class="display-1366"></li>
+						<li class="display-1024"></li>
+						<li class="display-768"></li>
+						<li class="display-480"></li>
+						<li class="display-320"></li>
+					</ul>
+				</div>
+			</div>
+			<div id="footer">
+				<div class="copyright">
+					<a href="http://easynfast.net/" target="_blank">EasynFast.net</a>
+					<p>All rights reserved - EasynFast Group 2014</p>
+				</div>
+			</div>
+		</div>
+		<div class="opacity opacity-close"></div>
+		<div class="dialog-box">
+			<div class="close"><a>Start</a></div>
+			<div class="dialog-content">
+				<ul class="dialog-tab">
+					<li class="active-tab" title="tab-1"><a href="#">purpose</a></li>
+					<li title="tab-2"><a href="#">how to use</a></li>
+					<li title="tab-3"><a href="#">contact</a></li>
+				</ul>
+				<div class="dialog-tab-content">
+					<div class="tab-1 tab-show">
+						<div class="letter">
+							<h2>Enim ad minim veniam,</h2>
+							<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod.
+							</p>
+							<p>Tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.</p>
+							<p>Ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+						</div>
+					</div>
+					<div class="tab-2 tab-show">
+						<div class="slide-wrap">
+							<ul class="slide-show">
+								<li><img src="images/img-1.png" alt="Test Responsive"/></li>
+								<li><img src="images/img-2.png" alt="Test Responsive"/></li>
+								<li><img src="images/img-3.png" alt="Test Responsive"/></li>
+								<li><img src="images/img-4.png" alt="Test Responsive"/></li>
+							</ul>
+						</div>
+					</div>
+					<div class="tab-3 tab-show">
+						<form class="form-content">
+							<input class="form-name" type="text" placeholder="Name"/>
+							<input class="form-phone" type="text" placeholder="Phone"/>
+							<input class="form-email" type="text" placeholder="Email"/>
+							<textarea class="form-message" placeholder="Message"></textarea>
+							<input type="submit" value="Send"/>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//active screen
+				$('.device-thumb li').click(function() {
+					$('.active').removeClass('active');
+					$(this).addClass('active');
+					//show screen tab
+					$('.screen-slide li').fadeOut(100);
+					var slide_show = $(this).attr('title');
+					$('.' + slide_show).slideDown(700);
+				});
+				//active tab dialog
+				$('.dialog-tab li').click(function() {
+					$('.active-tab').removeClass('active-tab');
+					$(this).addClass('active-tab');
+					//show tab dialog
+					$('.dialog-tab-content .tab-show').hide();
+					var tab_show = $(this).attr('title');
+					$('.' + tab_show).show();
+				});
+				//close
+				$('.close a').click(function() {
+					$('.dialog-box').fadeOut(500);
+					$('.opacity').fadeOut(500);
+				});
+				//show dialog
+				$('.returndialog').click(function() {
+					$('.dialog-box').fadeIn(500);
+					$('.opacity').fadeIn(500);
+				});
+			});
+			//bx slider
+			$(document).ready(function() {
+				$('.slide-show').bxSlider();
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,224 @@
+// Reset CSS
+@import "reset";
+@import "dialog";
+
+@mixin head-pos($margin, $float){
+	margin: $margin;
+	float: $float;
+}
+@mixin transition{
+	transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+@mixin opacity($opac, $alpha){
+	opacity: $opac;
+	filter: alpha(opacity=$alpha);
+}
+@font-face {
+	font-family: "neo-san";
+	src: url("../UTM Neo Sans Intel.ttf");
+}
+@font-face {
+	font-family:"neo-san";
+	src: url("../UTM Neo Sans IntelBold.ttf");
+	font-weight:bold;
+}
+#wrapper{
+	width: 100%;
+}
+#header{
+	width: 100%;
+	height: 400px;
+	margin: auto;
+	.main-head{
+		overflow: hidden;
+	}
+	.logo-test-responsive{
+		@include head-pos(47px 0 0 15px, left);
+	}
+	.social{
+		@include head-pos(25px 6px, right);
+		.facebook{
+			float: left;
+			width: 44px;
+			height: 44px;
+			margin-left: 10px;
+			@include transition;
+			background: url(../images/icon-social-44x44.png) no-repeat 0 0;
+			&:hover{
+				@include opacity(.7, 70);
+			}
+		}
+		.returndialog{
+			background: url(../images/icon-dialog-44x44.png) no-repeat;
+			@extend .facebook;
+		}
+		.google-plus{
+			background: url(../images/icon-social-44x44.png) no-repeat -44px 0;
+			@extend .facebook;
+		}
+		.twiter{
+			background: url(../images/icon-social-44x44.png) no-repeat -88px 0;
+			@extend .facebook;
+		}
+		.donate{
+			background: url(../images/icon-donate-44x44.png) no-repeat;
+			@extend .facebook;
+		}
+
+	}
+	.logo-easynfast{
+		@include head-pos(25px 0, right);
+	}
+	.search-box{
+		position: relative;
+		left: 330px;
+		bottom: 185px;
+		display: inline;
+		> input[type="text"]{
+			width: 600px;
+			height: 50px;
+			background-color: #e6b576;
+			border: medium none;
+			color: #fff;
+			font-size: 22px;
+			padding-left: 20px;
+			border-radius: 4px;
+			-webkit-border-radius: 4px;
+			-moz-border-raidus: 4px;
+			-o-border-radius: 4px;
+		}
+		> input[type="submit"]{
+			background: url("../images/icon-view.png") no-repeat;
+			width: 90px;
+			height: 67px;
+			border: medium none;
+			cursor: pointer;
+			font-size: 0;
+			position: relative;
+			top: 7px;
+			left: 20px;
+			@include transition;
+			&:hover{
+				@include opacity(.8, 80);
+			}
+		}
+	}
+}
+#content{
+	width: 100%;
+}
+.device-wrap{
+	width: 100%;
+	height: 70px;
+	background-color: #edc38c;
+	border-top: 10px solid #e6b576;
+	.device-thumb{
+		height: 70px;
+		width: 996px;
+		margin: 0 auto;
+		li {
+			width: 56px;
+			height: 59px;
+			cursor: pointer;
+			@include opacity(.3, 30);
+			@include head-pos(6px 55px, left);
+			@include transition;
+			&:hover{
+				@include opacity(1, 100);
+			}
+		}
+		#screen-1600{
+			background: url("../images/icon-mobile-56x59.png") no-repeat 0 0;
+		}
+		#screen-1366{
+			background: url("../images/icon-mobile-56x59.png") no-repeat -56px 0;
+		}
+		#screen-1024{
+			background: url("../images/icon-mobile-56x59.png") no-repeat -112px 0;
+		}
+		#screen-768{
+			background: url("../images/icon-mobile-56x59.png") no-repeat -168px 0;
+		}
+		#screen-480{
+			background: url("../images/icon-mobile-56x59.png") no-repeat -224px 0;
+		}
+		#screen-320{
+			background: url("../images/icon-mobile-56x59.png") no-repeat -280px 0;
+		}
+		.active{
+			@include opacity(1, 100);
+		}
+	}
+}
+.screen-display{
+	width: 100%;
+	min-height: 620px;
+	padding: 100px 0 80px;
+	background-color: #3c271d;
+	background-image: url("../images/bg-ruler.png");
+	background-repeat: repeat-x;
+	border-bottom: 20px solid #20120b;
+	overflow: auto;
+	li{
+		display: none;
+	}
+	.display-1600{
+		background: #000;
+		width: 1600px;
+		height: 900px;
+		margin: 0 auto;
+	}
+	.display-1366{
+		background: #000;
+		width: 1366px;
+		height: 768px;
+		margin: 0 auto;
+	}
+	.display-1024{
+		background: url("../images/screen-1024.png") no-repeat;
+		width: 1251px;
+		height: 915px;
+		margin: 0 auto;
+		display: block;
+	}
+	.display-768{
+		background: url("../images/screen-768.png") no-repeat;
+		width: 905px;
+		height: 1237px;
+		margin: 0 auto;
+	}
+	.display-480{
+		background: url("../images/screen-480.png") no-repeat;
+		width: 658px;
+		height: 349px;
+		margin: 95px auto 0;
+	}
+	.display-320{
+		background: url("../images/screen-320.png") no-repeat;
+		width: 385px;
+		height: 726px;
+		margin: 0 auto;
+	}
+}
+#footer{
+	text-align: center;
+	height: 100px;
+	.copyright{
+		margin-top: 15px;
+		> a{
+			font-size: 33px;
+			font-weight: bold;
+			color:#20120b;
+			text-decoration: none;
+			letter-spacing: 8px;
+		}
+		> p{
+			font-size:15px;
+			color: #20120b;
+			letter-spacing: .7px;
+		}
+	}
+}
