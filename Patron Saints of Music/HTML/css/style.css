@@ -1,0 +1,372 @@
+/*reset css*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0 none;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  font-weight: normal;
+  font-family: 'century gothic', sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+ol, ul, li {
+  list-style: none outside none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+.clear {
+  clear: both;
+}
+
+/****end reset****/
+@font-face {
+  font-family: 'century gothic';
+  src: url("../lib/GOTHIC.TTF");
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'century gothic';
+  src: url("../lib/GOTHICB.TTF");
+  font-weight: bold;
+}
+#wrapper {
+  max-width: 1100px;
+  width: 100%;
+  background: #fff;
+  margin: 0 auto;
+}
+#wrapper .btn-back {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 9999;
+}
+
+#header {
+  overflow: hidden;
+}
+#header h1 {
+  float: left;
+  margin: 22px 0 16px 47px;
+}
+#header h1 a {
+  display: block;
+}
+#header .navigation {
+  float: right;
+  max-width: 600px;
+  width: 100%;
+  margin: 40px 40px 0 0;
+  text-align: right;
+}
+#header .social-nav {
+  overflow: hidden;
+  margin-bottom: 35px;
+}
+#header .social-nav li {
+  float: right;
+  padding-left: 4px;
+}
+#header .main-nav {
+  float: right;
+}
+#header .main-nav li {
+  float: left;
+  padding-left: 35px;
+}
+#header .main-nav li > a {
+  color: #112255;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+#header .main-nav li > a:hover {
+  color: #1083cd;
+}
+
+.mail, .twiter, .google, .facebook1 {
+  display: block;
+  width: 34px;
+  height: 34px;
+  transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  background: url(../images/icon-social-34x34.png) no-repeat 0 0;
+}
+.mail:hover, .twiter:hover, .google:hover, .facebook1:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+
+.twiter {
+  background: url(../images/icon-social-34x34.png) no-repeat -34px 0;
+}
+
+.google {
+  background: url(../images/icon-social-34x34.png) no-repeat -68px 0;
+}
+
+.facebook1 {
+  background: url(../images/icon-social-34x34.png) no-repeat -102px 0;
+}
+
+#content .banner {
+  display: block;
+  position: relative;
+}
+#content .banner img {
+  width: 100%;
+  height: auto;
+}
+#content .banner > a {
+  bottom: 13%;
+  color: #fff;
+  font-size: 1vmax;
+  font-weight: bold;
+  left: 43%;
+  position: absolute;
+  text-decoration: none;
+}
+#content .banner > a:hover {
+  text-decoration: underline;
+}
+#content h2 {
+  text-align: center;
+  font-size: 75px;
+  font-weight: normal;
+  color: #0b2351;
+  margin: 20px 0;
+}
+#content h2 span {
+  color: #1083cd;
+}
+#content p {
+  font-size: 16px;
+  color: #4c4e4f;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+#our-services {
+  margin: 0 55px 75px;
+}
+#our-services h3 {
+  font-size: 39px;
+  font-weight: normal;
+  color: #1083cd;
+  margin-bottom: 10px;
+}
+#our-services .last-paragraph {
+  margin-bottom: 50px;
+}
+
+#our-clients {
+  margin: 0 25px;
+  padding: 35px 0 50px;
+  border-top: 1px solid #4c4e4f;
+  border-bottom: 1px solid #4c4e4f;
+  position: relative;
+}
+#our-clients .clients-slider {
+  height: 116px;
+}
+#our-clients .clients-slider a {
+  margin: 0 20px;
+  vertical-align: middle;
+}
+#our-clients .caroufredsel_wrapper {
+  height: 116px !important;
+  max-width: 900px;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
+#our-clients #services-prev {
+  width: 67px;
+  height: 116px;
+  position: absolute;
+  z-index: 200;
+  left: 0;
+  top: 170px;
+  background-image: url("../images/icon-arrow-67x67.png");
+  background-position: 0 center;
+  background-color: #fff;
+  background-repeat: no-repeat;
+}
+#our-clients #services-next {
+  width: 67px;
+  height: 116px;
+  position: absolute;
+  z-index: 200;
+  right: 0;
+  top: 170px;
+  background-image: url("../images/icon-arrow-67x67.png");
+  background-position: -67px center;
+  background-color: #fff;
+  background-repeat: no-repeat;
+}
+
+#audio {
+  margin: 55px 0 100px;
+  width: 100%;
+}
+#audio .jukebox-audio {
+  margin: 0 auto;
+  max-width: 980px;
+  border: 3px solid #000;
+}
+#audio .jukebox-audio > a {
+  font-size: 2.5vw;
+  color: #000;
+  margin: 5em 0;
+  display: block;
+  text-align: center;
+}
+
+#videos {
+  padding: 35px 0 15px;
+  border-top: 1px solid #4c4e4f;
+  text-align: center;
+  width: 100%;
+}
+#videos .videos-content {
+  max-width: 906px;
+  margin: 0 auto;
+  padding-left: 12px;
+}
+#videos .videos-demo {
+  float: left;
+  width: 437px;
+  height: 340px;
+  border: 1px solid #c1bcbc;
+  position: relative;
+  margin: 0 12px 12px 0;
+}
+#videos .videos-demo .video-wrap {
+  display: block;
+  margin: 15px auto;
+}
+#videos .videos-demo img {
+  cursor: pointer;
+}
+#videos .videos-demo p {
+  font-size: 29px;
+  margin: 0;
+  padding-left: 15px;
+  width: 90%;
+}
+#videos .loadmore {
+  margin-right: 15px;
+  height: 54px;
+  line-height: 54px;
+  background: #c8c2c2;
+  font-size: 25px;
+  color: #4c4e4f;
+  text-align: center;
+  display: block;
+}
+#videos .loadmore:hover {
+  color: #1083cd;
+}
+
+#contact {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 890px;
+  width: 100%;
+}
+#contact h2 {
+  float: left;
+}
+#contact .contact-social-nav {
+  overflow: hidden;
+  float: right;
+  margin-top: 60px;
+}
+#contact .contact-social-nav li {
+  float: right;
+  padding-left: 4px;
+}
+#contact p {
+  font-size: 22px;
+  margin-bottom: 40px;
+}
+#contact p span {
+  display: block;
+  color: #1083cd;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+@media (max-width: 1020px) {
+  #header h1 {
+    margin: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  #header h1 a {
+    display: inline;
+  }
+  #header .navigation {
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin: 0;
+  }
+  #header .social-nav {
+    width: 152px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  #header .main-nav {
+    overflow: hidden;
+    max-width: 600px;
+    margin: 36px auto;
+    float: none;
+  }
+}
+@media (max-width: 930px) {
+  #videos .videos-demo {
+    float: none;
+    margin: 15px auto;
+  }
+
+  #contact {
+    padding: 0 20px;
+    max-width: 95%;
+    width: 100%;
+  }
+}
