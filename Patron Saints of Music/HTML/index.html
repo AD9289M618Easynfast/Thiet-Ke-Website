@@ -19,6 +19,7 @@
 					</a>
 				</h1>
 				<div class="navigation">
+					<div class="show-main-nav"></div>
 					<ul class="social-nav">
 						<li><a class="facebook1" href="#" title="Facebook"></a></li>
 						<li><a class="google" href="#" title="Google Plus"></a></li>
@@ -33,6 +34,7 @@
 						<li><a href="#audio">Audio</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
+
 				</div>
 			</div>
 			<div id="content">
@@ -147,6 +149,10 @@
 				});
 				$('.video-wrap').click(function() {
 					$('body').addClass('overflow');
+				});
+				//show main nav
+				$('.show-main-nav').click(function() {
+					$('.main-nav').toggle('swing');
 				});
 			});
 			// Services slider
